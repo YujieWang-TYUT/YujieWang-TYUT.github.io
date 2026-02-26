@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Yujie Wang | Academic Homepage</title>
 
 <style>
-body {
+  body {
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
     color: #222;
     line-height: 1.6;
-}
+    background: #fff;
+  }
 
-.navbar {
+  .navbar {
     position: fixed;
     top: 0;
     width: 100%;
@@ -21,135 +22,266 @@ body {
     border-bottom: 1px solid #eee;
     padding: 12px 0;
     z-index: 1000;
-}
+  }
 
-.navbar .container {
+  .navbar .container {
     width: 900px;
     margin: auto;
     display: flex;
     justify-content: space-between;
-}
+    align-items: center;
+  }
 
-.navbar a {
+  .navbar a {
     text-decoration: none;
     color: #333;
-    margin-left: 20px;
+    margin-left: 18px;
     font-size: 15px;
-}
+  }
 
-.container {
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+
+  .container {
     width: 900px;
     margin: auto;
     padding: 80px 20px 40px;
-}
+  }
 
-.header {
+  .header {
     display: flex;
-    gap: 30px;
+    gap: 28px;
     align-items: center;
-}
+  }
 
-.photo {
+  .photo {
     width: 160px;
-    border-radius: 6px;
-}
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #eee;
+  }
 
-h1 {
-    margin-bottom: 5px;
-}
+  h1 {
+    margin: 0 0 6px 0;
+    font-size: 34px;
+  }
 
-h2 {
-    margin-top: 50px;
+  .subtitle {
+    margin: 0;
+    color: #444;
+  }
+
+  .meta {
+    margin-top: 10px;
+    color: #333;
+  }
+
+  .meta a { color: #1a73e8; }
+
+  h2 {
+    margin-top: 44px;
     border-bottom: 2px solid #eee;
-    padding-bottom: 5px;
-}
+    padding-bottom: 6px;
+    font-size: 22px;
+  }
 
-ul {
-    padding-left: 20px;
-}
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
 
-a {
-    color: #1a73e8;
-}
+  .card {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 14px 16px;
+    background: #fff;
+  }
 
-.footer {
+  ul { padding-left: 18px; }
+  li { margin: 6px 0; }
+
+  .tag {
+    display: inline-block;
+    font-size: 12px;
+    padding: 2px 8px;
+    border: 1px solid #eee;
+    border-radius: 999px;
+    margin-left: 8px;
+    color: #666;
+    vertical-align: middle;
+  }
+
+  .footer {
     margin-top: 60px;
     font-size: 14px;
     color: #666;
-}
+  }
+
+  .note {
+    color: #666;
+    font-size: 14px;
+  }
+
+  @media (max-width: 980px) {
+    .navbar .container, .container { width: auto; }
+    .header { flex-direction: column; align-items: flex-start; }
+    .grid { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 
 <body>
-
-<div class="navbar">
-  <div class="container">
-    <div><strong>Yujie Wang</strong></div>
-    <div>
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#projects">Projects</a>
-      <a href="#publications">Publications</a>
-      <a href="#contact">Contact</a>
+  <div class="navbar">
+    <div class="container">
+      <div><strong>Yujie Wang</strong></div>
+      <div>
+        <a href="#about">About</a>
+        <a href="#profile">个人信息</a>
+        <a href="#education">教育背景</a>
+        <a href="#research">科研成果</a>
+        <a href="#skills">技能特长</a>
+        <a href="#hobbies">兴趣爱好</a>
+        <a href="#awards">竞赛经历</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="container">
+  <div class="container">
 
-<div class="header" id="about">
-<img src="https://via.placeholder.com/160" class="photo">
-<div>
-<h1>Yujie Wang</h1>
-<p>
-Graduate Student<br>
-Taiyuan University of Technology<br>
-Email: your_email@example.com<br>
-<a href="https://github.com/YujieWang-TYUT">GitHub</a>
-</p>
-</div>
-</div>
+    <!-- Header -->
+    <div class="header" id="about">
+      <!-- 你稍后上传照片到仓库根目录：profile.jpg -->
+      <img src="profile.jpg" alt="Profile Photo" class="photo" />
+      <div>
+        <h1>Yujie Wang（王瑜杰）</h1>
+        <p class="subtitle">计算机科学与技术学院（大数据学院） · 学术简历网页</p>
 
-<h2>About Me</h2>
-<p>
-I am a graduate student in power electronics and energy systems at Taiyuan University of Technology.
-My research focuses on grid-forming converters, virtual synchronous generators (VSG),
-photovoltaic power systems, and microgrid stability and control.
-</p>
+        <div class="meta" id="contact">
+          Email：
+          <a href="mailto:wangyujie0120@link.tyut.edu.com">wangyujie0120@link.tyut.edu.com</a>
+          <span class="tag">可改成你的真实邮箱</span>
+          <br />
+          Phone：157-0345-2669
+          <br />
+          Homepage：
+          <a href="https://yujiewang-tyut.github.io/" target="_blank" rel="noreferrer">https://yujiewang-tyut.github.io/</a>
+          <br />
+          GitHub：
+          <a href="https://github.com/YujieWang-TYUT" target="_blank" rel="noreferrer">github.com/YujieWang-TYUT</a>
+        </div>
 
-<h2 id="research">Research Interests</h2>
-<ul>
-<li>Grid-forming Inverters (Virtual Synchronous Generator, VSG)</li>
-<li>Parallel Inverter Circulating Current Suppression</li>
-<li>Photovoltaic Power Forecasting</li>
-<li>Energy Storage and Microgrid Control</li>
-<li>Power Electronics Modeling and Simulation</li>
-</ul>
+        <p class="note">
+          提示：如果你不想在网页公开手机号，把 “Phone” 那行删掉即可。
+        </p>
+      </div>
+    </div>
 
-<h2 id="projects">Projects</h2>
-<ul>
-<li>VSG-based Parallel Inverter Control Strategy</li>
-<li>Adaptive Virtual Harmonic Impedance Control</li>
-<li>Photovoltaic Probabilistic Forecasting (ZM-QR)</li>
-<li>FPGA-based Digital Power Converter Control</li>
-</ul>
+    <!-- About / Summary -->
+    <h2>About Me</h2>
+    <p>
+      （这里是简介段落。你 LaTeX 里没有写“自我介绍”，我先留一个位置。）
+      你可以写：研究方向、当前阶段、感兴趣的合作方向等。
+    </p>
 
-<h2 id="publications">Publications</h2>
-<ul>
-<li>Y. Wang, et al. Adaptive Virtual Harmonic Impedance Control for Parallel Inverters. (in preparation)</li>
-<li>Y. Wang, et al. Zero-Mask Quantile Regression for Photovoltaic Forecasting. (in preparation)</li>
-</ul>
+    <!-- Personal Info -->
+    <h2 id="profile">个人信息</h2>
+    <div class="grid">
+      <div class="card">
+        <ul>
+          <li><strong>姓名：</strong>王瑜杰</li>
+          <li><strong>性别：</strong>女</li>
+          <li><strong>出生年月：</strong>2000年1月</li>
+          <li><strong>政治面貌：</strong>中共党员</li>
+        </ul>
+      </div>
+      <div class="card">
+        <ul>
+          <li><strong>学院：</strong>计算机科学与技术学院 | College of Computer Science and Technology</li>
+          <li><strong>研究方向（概述）：</strong>计算机视觉、基础大模型、医学多模态数据分析与应用、医学辅助诊断人机交互等。</li>
+        </ul>
+      </div>
+    </div>
 
-<h2 id="contact">Contact</h2>
-<p>
-Email: your_email@example.com<br>
-GitHub: <a href="https://github.com/YujieWang-TYUT">github.com/YujieWang-TYUT</a>
-</p>
+    <!-- Education -->
+    <h2 id="education">教育背景</h2>
 
-<div class="footer">
-© 2026 Yujie Wang
-</div>
+    <div class="card">
+      <p><strong>太原理工大学</strong> · 本科 <span class="tag">2018年9月—2022年6月</span></p>
+      <ul>
+        <li>软件学院，软件工程（信息与大数据工程）</li>
+        <li><strong>技能证书：</strong>CET-4（468分）、CET-6（505分）</li>
+      </ul>
+    </div>
 
-</div>
+    <div class="card" style="margin-top:14px;">
+      <p><strong>太原理工大学</strong> · 硕士研究生 <span class="tag">2023年9月—2025年6月</span></p>
+      <ul>
+        <li>计算机科学与技术学院（大数据学院），计算机科学与技术，<strong>导师：</strong>降爱莲 副教授</li>
+        <li><strong>硕士专业成绩：</strong>加权平均成绩 89.8（7/84）</li>
+        <li><strong>技能证书：</strong>软件设计师中级证书、全国计算机等级考试三级证书</li>
+        <li><strong>研究方向：</strong>医学图像处理、医学多模态数据处理与应用、计算机视觉等。</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <p><strong>太原理工大学</strong> · 博士研究生 <span class="tag">2025年9月—至今</span></p>
+      <ul>
+        <li>计算机科学与技术学院（大数据学院），计算机科学与技术，<strong>导师：</strong>魏明强 教授</li>
+        <li><strong>研究方向：</strong>计算机视觉、基础大模型、医学多模态数据分析与应用、医学辅助诊断人机交互等。</li>
+      </ul>
+    </div>
+
+    <!-- Research -->
+    <h2 id="research">科研成果</h2>
+    <div class="card">
+      <p><strong>FlexKIP-RRG: Flexible Knowledge Injection for Clinical Anomaly Prior-Reinforced Radiology Report Generation</strong></p>
+      <ul>
+        <li><strong>第一作者</strong> <span class="tag">2025</span> 投稿于 <strong>IEEE TMI</strong>（SCI-1区 TOP）</li>
+        <li><strong>当前状态：</strong>重投修改中（<strong>Revise &amp; Resubmit</strong>），按照审稿意见补充实验与修改论文。</li>
+      </ul>
+      <p class="note">（你后面如果把其它论文从 LaTeX 注释区解放出来，我也可以继续帮你加到网页上。）</p>
+    </div>
+
+    <!-- Skills & Hobbies -->
+    <div class="grid">
+      <div class="card" id="skills">
+        <h2 style="margin-top:0;">技能特长</h2>
+        <ul>
+          <li>熟练使用 Python、Java 等编程语言</li>
+          <li>熟练使用 Keras、Pytorch 等深度学习框架</li>
+          <li>熟悉 Linux 服务器的使用</li>
+          <li>具备良好的团队协作能力与沟通能力</li>
+        </ul>
+      </div>
+
+      <div class="card" id="hobbies">
+        <h2 style="margin-top:0;">兴趣爱好</h2>
+        <ul>
+          <li>羽毛球</li>
+          <li>游泳</li>
+          <li>滑雪</li>
+          <li>团队协作类游戏</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Awards -->
+    <h2 id="awards">竞赛经历</h2>
+    <div class="card">
+      <ul>
+        <li><strong>“华为杯”第二十一届中国研究生数学建模竞赛</strong> · 国家级三等奖 <span class="tag">2024年12月</span></li>
+        <li><strong>“华为杯”第二十二届中国研究生数学建模竞赛</strong> · 国家级三等奖 <span class="tag">2025年12月</span></li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      © 2026 Yujie Wang
+    </div>
+
+  </div>
 </body>
 </html>
